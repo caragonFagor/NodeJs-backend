@@ -1,6 +1,6 @@
 const response = require('../../red/response');
 
-const middlewares = {
+const auth = {
 
     isLoggedIn : function (req, res, next) {
         console.log('Estamos en el middleware isLoggedIn');
@@ -16,4 +16,4 @@ const middlewares = {
         // }
     }
 };
-module.exports = middlewares;
+module.exports = auth;

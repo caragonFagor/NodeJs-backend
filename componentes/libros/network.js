@@ -3,9 +3,9 @@ const router = express.Router();
 const response = require('../../red/response');
 const controlador = require('./controlador');
 
-const isLoggedIn = require('./middlewares').isLoggedIn;
+const isLoggedIn = require('../auth/auth').isLoggedIn;
 
-//router.use(isLoggedIn);
+router.use(isLoggedIn);
 
 router.get('/', peticionGet);
 router.get('/:id', peticionGetId);
